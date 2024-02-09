@@ -3,8 +3,14 @@ import PropTypes from "prop-types";
 
 function ExerciseVideo({ exerciseVideos, name }) {
   return (
-    <Box sx={{ marginTop: { lg: "200px", xs: "20px" } }} p="20px">
-      <Typography variant="h3" mb="33px">
+    <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
+      <Typography
+        sx={{ fontSize: { lg: "44px", xs: "25px" } }}
+        fontWeight={700}
+        color="#000"
+        variant="h3"
+        mb="33px"
+      >
         Watch{" "}
         <span style={{ color: "#ff2625", textTransform: "capitalize" }}>
           {name}
@@ -20,7 +26,7 @@ function ExerciseVideo({ exerciseVideos, name }) {
           gap: { lg: "110px", xs: "0" },
         }}
       >
-        {exerciseVideos?.slice(0, 6).map((item) => (
+        {exerciseVideos?.slice(0, 6)?.map((item) => (
           <a
             key={item.id}
             className="exercise-video"
@@ -28,9 +34,18 @@ function ExerciseVideo({ exerciseVideos, name }) {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={item.video.thumbnails[0].url} alt={item.video.title} />
+            <img
+              src={item.video.thumbnails[0].url}
+              alt={item.video.title}
+              style={{ borderTopLeftRadius: "20px" }}
+            />
             <Box>
-              <Typography variant="h5" color="#000">
+              <Typography
+                sx={{ fontSize: { lg: "28px", xs: "18px" } }}
+                fontWeight={600}
+                variant="h5"
+                color="#000"
+              >
                 {item.video.title}
               </Typography>
               <Typography variant="h6" color="#000">

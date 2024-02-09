@@ -39,7 +39,7 @@ function ExerciseCard({ exercise }) {
         mt="11px"
         pb="10px"
         textTransform="capitalize"
-        fontSize="22px"
+        sx={{ fontSize: { lg: "24px", xs: "20px" } }}
       >
         {exercise.name}
       </Typography>

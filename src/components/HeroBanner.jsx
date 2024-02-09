@@ -22,7 +22,12 @@ function HeroBanner() {
       >
         Sweat, Smile <br /> and Repeat
       </Typography>
-      <Typography fontSize="22px" lineHeight="35px" mb={4}>
+      <Typography
+        fontSize="22px"
+        fontFamily="Alegreya"
+        lineHeight="35px"
+        mb={4}
+      >
         Check out the most effective exercices
       </Typography>
       <Button
